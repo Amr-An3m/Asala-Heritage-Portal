@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أصالة – بوابة التراث السعودي</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;500;600;700;800&family=Noto+Sans+Arabic:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Original CSS Styles (including variables and Islamic patterns) -->
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- Tailwind CSS (CDN) configured to match original tailwind.config.js -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: ["class"],
+        theme: {
+          extend: {
+            colors: {
+              border: "hsl(var(--border))",
+              input: "hsl(var(--input))",
+              ring: "hsl(var(--ring))",
+              background: "hsl(var(--background))",
+              foreground: "hsl(var(--foreground))",
+              saudi: {
+                gold: "#D4AF37",
+                "gold-light": "#E5C76B",
+                "gold-dark": "#B8960C",
+                green: "#0D3B2E",
+                "green-light": "#1A5A45",
+                beige: "#C9B896",
+                "beige-light": "#E5D9C3",
+                black: "#1A1A1A",
+                "black-light": "#2D2D2D",
+                brown: "#8B4513",
+                cream: "#F5F5DC",
+              },
+            },
+            fontFamily: {
+              amiri: ["Amiri", "serif"],
+              cairo: ["Cairo", "sans-serif"],
+              noto: ["Noto Sans Arabic", "sans-serif"],
+              playfair: ["Playfair Display", "serif"],
+              inter: ["Inter", "sans-serif"],
+            },
+            boxShadow: {
+              gold: "0 0 20px rgba(212, 175, 55, 0.3)",
+              "gold-lg": "0 0 40px rgba(212, 175, 55, 0.4)",
+            },
+            backgroundImage: {
+              "gold-gradient": "linear-gradient(135deg, #D4AF37 0%, #E5C76B 50%, #B8960C 100%)",
+              "green-gradient": "linear-gradient(135deg, #0D3B2E 0%, #1A5A45 100%)",
+            },
+          }
+        }
+      }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- SEO & Social Media -->
+    <meta name="description" content="تواصل مع فريق بوابة أصالة للاستفسار عن التراث السعودي أو للمشاركة في تطوير المنصة.">
+    <meta property="og:title" content="تواصل معنا – أصالة">
+    <meta property="og:description" content="نحن هنا للإجابة على استفساراتكم حول التراث السعودي.">
+    <meta property="og:image" content="assets/images/logo.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="assets/images/logo.png">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+</head>
+<body class="bg-saudi-black text-saudi-foreground font-noto">
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="fixed inset-0 z-50 bg-saudi-black flex items-center justify-center transition-opacity duration-500">
+        <div class="text-center">
+            <div class="relative w-24 h-24 mx-auto mb-6">
+              <div class="absolute inset-0 border-4 border-saudi-gold border-t-transparent rounded-full animate-spin"></div>
+              <img src="assets/images/logo.png" alt="Logo" class="absolute inset-2 w-20 h-20 object-contain">
+            </div>
+            <h1 class="font-amiri text-3xl text-saudi-gold mb-2">أصالة</h1>
+            <p class="text-saudi-cream/60">بوابة التراث السعودي</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent">
+      <div class="container-custom">
+        <div class="flex items-center justify-between h-20">
+          <!-- Logo -->
+          <a href="index.html" class="flex items-center gap-3 group">
+            <div class="relative transition-transform duration-300 group-hover:scale-110">
+              <img src="assets/images/logo.png" alt="أصالة" class="h-12 w-auto object-contain">
+            </div>
+            <div class="hidden sm:block">
+              <h1 class="font-amiri text-xl font-bold text-saudi-gold">أصالة</h1>
+              <p class="text-[10px] text-saudi-beige/70 uppercase tracking-widest leading-none">Saudi Heritage</p>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden lg:flex items-center gap-8">
+            <a href="index.html" class="nav-link text-sm font-medium transition-colors text-saudi-cream/80 hover:text-saudi-gold">الرئيسية</a>
+            <a href="history.html" class="nav-link text-sm font-medium transition-colors text-saudi-cream/80 hover:text-saudi-gold">التاريخ</a>
+            <a href="heritage.html" class="nav-link text-sm font-medium transition-colors text-saudi-cream/80 hover:text-saudi-gold">التراث</a>
+            <a href="landmarks.html" class="nav-link text-sm font-medium transition-colors text-saudi-cream/80 hover:text-saudi-gold">المعالم</a>
+            <a href="experiences.html" class="nav-link text-sm font-medium transition-colors text-saudi-cream/80 hover:text-saudi-gold">التجارب</a>
+            <a href="gallery.html" class="nav-link text-sm font-medium transition-colors text-saudi-cream/80 hover:text-saudi-gold">المعرض</a>
+            <a href="contact.html" class="nav-link text-sm font-medium transition-colors text-saudi-gold">تواصل</a>
+          </div>
+
+          <!-- Actions -->
+          <div class="flex items-center gap-4">
+            <button id="theme-toggle" class="w-10 h-10 rounded-full bg-saudi-black-light/50 flex items-center justify-center text-saudi-gold hover:bg-saudi-gold/20 transition-colors transform hover:scale-110 active:scale-95">
+              <i data-lucide="sun"></i>
+              <i data-lucide="moon" class="hidden"></i>
+            </button>
+            <button id="mobile-menu-toggle" class="lg:hidden w-10 h-10 rounded-full bg-saudi-black-light/50 flex items-center justify-center text-saudi-gold transform hover:scale-110 active:scale-95">
+              <i data-lucide="menu"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu (Drawer/Overlay) -->
+      <div id="mobile-nav-overlay" class="fixed inset-0 z-[60] hidden">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-saudi-black/80 backdrop-blur-sm opacity-0 transition-opacity duration-300"></div>
+        
+        <!-- Drawer Container -->
+        <nav class="absolute top-0 right-0 bottom-0 w-[280px] bg-saudi-black border-l border-saudi-gold/20 flex flex-col translate-x-full transition-transform duration-300">
+          <div class="p-6 flex items-center justify-between border-b border-saudi-gold/10">
+            <h2 class="font-amiri text-2xl text-saudi-gold">أصالة</h2>
+            <button id="mobile-menu-close" class="text-saudi-cream/70 hover:text-saudi-gold">
+              <i data-lucide="x"></i>
+            </button>
+          </div>
+          
+          <div class="flex-grow overflow-y-auto py-8 px-6 space-y-4">
+            <a href="index.html" class="flex items-center gap-4 py-3 text-lg font-medium text-saudi-cream/80 hover:text-saudi-gold border-b border-saudi-gold/10">
+              <i data-lucide="home" class="w-5 h-5"></i> الرئيسية
+            </a>
+            <a href="history.html" class="flex items-center gap-4 py-3 text-lg font-medium text-saudi-cream/80 hover:text-saudi-gold border-b border-saudi-gold/10">
+              <i data-lucide="history" class="w-5 h-5"></i> التاريخ
+            </a>
+            <a href="heritage.html" class="flex items-center gap-4 py-3 text-lg font-medium text-saudi-cream/80 hover:text-saudi-gold border-b border-saudi-gold/10">
+              <i data-lucide="palmtree" class="w-5 h-5"></i> التراث
+            </a>
+            <a href="landmarks.html" class="flex items-center gap-4 py-3 text-lg font-medium text-saudi-cream/80 hover:text-saudi-gold border-b border-saudi-gold/10">
+              <i data-lucide="map-pin" class="w-5 h-5"></i> المعالم
+            </a>
+            <a href="gallery.html" class="flex items-center gap-4 py-3 text-lg font-medium text-saudi-cream/80 hover:text-saudi-gold border-b border-saudi-gold/10">
+              <i data-lucide="image" class="w-5 h-5"></i> المعرض
+            </a>
+            <a href="contact.html" class="flex items-center gap-4 py-3 text-lg font-medium text-saudi-gold border-b border-saudi-gold/10">
+              <i data-lucide="phone" class="w-5 h-5"></i> تواصل
+            </a>
+          </div>
+
+          <div class="p-6 border-t border-saudi-gold/10">
+            <p class="text-xs text-saudi-cream/50 text-center">بوابة التراث السعودي © 2025</p>
+          </div>
+        </nav>
+      </div>
+    </nav>
+
+    <main class="transition-all duration-500 fade-in-section">
+      <!-- Hero Section -->
+      <section class="relative py-24 bg-saudi-black overflow-hidden pt-32">
+        <div class="absolute inset-0 islamic-pattern opacity-20"></div>
+        <div class="container-custom relative z-10">
+          <div class="text-center max-w-3xl mx-auto opacity-0 translate-y-8 transition-all duration-700 ease-out scroll-reveal">
+            <span class="inline-block text-saudi-gold text-sm font-medium mb-4">
+              نحن هنا لمساعدتك
+            </span>
+            <h1 class="font-amiri text-5xl md:text-6xl font-bold text-white mb-6">
+              تواصل <span class="text-gold-gradient">معنا</span>
+            </h1>
+            <p class="text-saudi-cream/80 text-lg leading-relaxed">
+              نحن هنا للإجابة على استفساراتك واستقبال ملاحظاتك
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="section-padding bg-saudi-black scroll-section">
+        <div class="container-custom">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+            <!-- Contact Form -->
+            <div class="opacity-0 translate-x-12 transition-all duration-800 ease-out scroll-reveal">
+              <div class="bg-saudi-black-light/50 border border-saudi-gold/20 rounded-2xl p-8">
+                <h2 class="font-cairo text-2xl font-bold text-white mb-6">أرسل لنا رسالة</h2>
+
+                <form id="contact-form" class="space-y-6">
+                  <div>
+                    <label class="block text-saudi-cream/80 text-sm mb-2">الاسم الكامل</label>
+                    <input type="text" name="name" class="form-input" placeholder="أدخل اسمك الكامل" required>
+                  </div>
+
+                  <div>
+                    <label class="block text-saudi-cream/80 text-sm mb-2">البريد الإلكتروني</label>
+                    <input type="email" name="email" class="form-input" placeholder="example@email.com" required>
+                  </div>
+
+                  <div>
+                    <label class="block text-saudi-cream/80 text-sm mb-2">الرسالة</label>
+                    <textarea name="message" class="form-input min-h-[150px] resize-none" placeholder="اكتب رسالتك هنا..." required></textarea>
+                  </div>
+
+                  <button type="submit" class="btn-primary w-full flex items-center justify-center gap-2">
+                    <i data-lucide="send" class="w-4.5 h-4.5"></i>
+                    إرسال الرسالة
+                  </button>
+                </form>
+
+                <div id="contact-success" class="hidden text-center py-12">
+                  <div class="w-16 h-16 rounded-full bg-saudi-gold/20 flex items-center justify-center mx-auto mb-4">
+                    <i data-lucide="check-circle" class="text-saudi-gold w-8 h-8"></i>
+                  </div>
+                  <h3 class="font-cairo text-xl font-bold text-white mb-2">تم إرسال رسالتك بنجاح</h3>
+                  <p class="text-saudi-cream/70">سنتواصل معك في أقرب وقت ممكن</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="opacity-0 -translate-x-12 transition-all duration-800 ease-out scroll-reveal delay-200 space-y-8">
+              <div>
+                <h2 class="font-cairo text-2xl font-bold text-white mb-6">معلومات التواصل</h2>
+                <p class="text-saudi-cream/70 mb-8">يمكنك التواصل معنا من خلال أي من القنوات التالية، وسنكون سعداء بالإجابة على جميع استفساراتك</p>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Info Item 1 -->
+                <div class="bg-saudi-black-light/50 border border-saudi-gold/20 rounded-xl p-6 hover:border-saudi-gold/40 transition-colors">
+                  <div class="w-12 h-12 rounded-xl bg-saudi-gold/20 flex items-center justify-center mb-4">
+                    <i data-lucide="map-pin" class="text-saudi-gold w-6 h-6"></i>
+                  </div>
+                  <h3 class="font-cairo text-lg font-bold text-white mb-2">العنوان</h3>
+                  <p class="text-saudi-cream/70">الرياض – المملكة العربية السعودية</p>
+                </div>
+                <!-- Info Item 2 -->
+                <div class="bg-saudi-black-light/50 border border-saudi-gold/20 rounded-xl p-6 hover:border-saudi-gold/40 transition-colors">
+                  <div class="w-12 h-12 rounded-xl bg-saudi-gold/20 flex items-center justify-center mb-4">
+                    <i data-lucide="mail" class="text-saudi-gold w-6 h-6"></i>
+                  </div>
+                  <h3 class="font-cairo text-lg font-bold text-white mb-2">البريد الإلكتروني</h3>
+                  <a href="mailto:info@asala.sa" class="text-saudi-cream/70 hover:text-saudi-gold transition-colors">info@asala.sa</a>
+                </div>
+                <!-- Info Item 3 -->
+                <div class="bg-saudi-black-light/50 border border-saudi-gold/20 rounded-xl p-6 hover:border-saudi-gold/40 transition-colors">
+                  <div class="w-12 h-12 rounded-xl bg-saudi-gold/20 flex items-center justify-center mb-4">
+                    <i data-lucide="phone" class="text-saudi-gold w-6 h-6"></i>
+                  </div>
+                  <h3 class="font-cairo text-lg font-bold text-white mb-2">الهاتف</h3>
+                  <a href="tel:+966500000000" class="text-saudi-cream/70 hover:text-saudi-gold transition-colors">+966 500 000 000</a>
+                </div>
+                <!-- Info Item 4 -->
+                <div class="bg-saudi-black-light/50 border border-saudi-gold/20 rounded-xl p-6 hover:border-saudi-gold/40 transition-colors">
+                  <div class="w-12 h-12 rounded-xl bg-saudi-gold/20 flex items-center justify-center mb-4">
+                    <i data-lucide="clock" class="text-saudi-gold w-6 h-6"></i>
+                  </div>
+                  <h3 class="font-cairo text-lg font-bold text-white mb-2">ساعات العمل</h3>
+                  <p class="text-saudi-cream/70">الأحد - الخميس: 9 ص - 5 م</p>
+                </div>
+              </div>
+
+              <!-- Map Placeholder -->
+              <div class="relative rounded-2xl overflow-hidden bg-saudi-black-light border border-saudi-gold/20 aspect-video">
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <div class="text-center">
+                    <i data-lucide="map-pin" class="text-saudi-gold w-12 h-12 mx-auto mb-4"></i>
+                    <p class="text-saudi-cream/70">الموقع على الخريطة</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="section-padding bg-saudi-black border-t border-saudi-gold/10 scroll-section">
+        <div class="container-custom">
+          <div class="text-center mb-12 opacity-0 translate-y-8 transition-all duration-700 ease-out scroll-reveal">
+            <h2 class="font-amiri text-3xl md:text-4xl font-bold text-white mb-4">
+              الأسئلة <span class="text-gold-gradient">الشائعة</span>
+            </h2>
+            <p class="text-saudi-cream/70">إجابات على أكثر الأسئلة شيوعاً</p>
+          </div>
+
+          <div class="max-w-3xl mx-auto space-y-4">
+            <!-- FAQ 1 -->
+            <div class="bg-saudi-black-light/50 border border-saudi-gold/20 rounded-xl p-6 opacity-0 translate-y-8 transition-all duration-700 ease-out scroll-reveal">
+              <h3 class="font-cairo text-lg font-bold text-white mb-2">ما هي منصة أصالة؟</h3>
+              <p class="text-saudi-cream/70">منصة أصالة هي بوابة رقمية تستعرض تاريخ وتراث المملكة العربية السعودية بأسلوب عصري تفاعلي.</p>
+            </div>
+            <!-- FAQ 2 -->
+            <div class="bg-saudi-black-light/50 border border-saudi-gold/20 rounded-xl p-6 opacity-0 translate-y-8 transition-all duration-700 ease-out scroll-reveal delay-100">
+              <h3 class="font-cairo text-lg font-bold text-white mb-2">هل المحتوى متاح مجاناً؟</h3>
+              <p class="text-saudi-cream/70">نعم، جميع المحتوى الأساسي متاح مجاناً. هناك بعض التجارب المتقدمة التي تتطلب اشتراكاً.</p>
+            </div>
+            <!-- FAQ 3 -->
+            <div class="bg-saudi-black-light/50 border border-saudi-gold/20 rounded-xl p-6 opacity-0 translate-y-8 transition-all duration-700 ease-out scroll-reveal delay-200">
+              <h3 class="font-cairo text-lg font-bold text-white mb-2">هل يمكنني المساهمة بالمحتوى؟</h3>
+              <p class="text-saudi-cream/70">نعم، نرحب بمساهماتكم. يمكنك التواصل معنا عبر نموذج التواصل أعلاه.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-saudi-black border-t border-saudi-gold/20 scroll-section">
+      <!-- Main Footer -->
+      <div class="container-custom section-padding">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          
+          <!-- Brand -->
+          <div class="opacity-0 translate-y-8 transition-all duration-700 ease-out scroll-reveal">
+            <div class="flex items-center gap-3 mb-6">
+              <img src="assets/images/logo.png" alt="أصالة" class="h-12 w-auto">
+              <div>
+                <h3 class="font-amiri text-2xl font-bold text-saudi-gold">أصالة</h3>
+              </div>
+            </div>
+            <p class="text-saudi-cream/70 text-sm leading-relaxed mb-6">
+              منصة رقمية تستعرض تاريخ وتراث المملكة العربية السعودية بأسلوب عصري تفاعلي، 
+              تهدف إلى الحفاظ على الإراث الثقافي ونشره للعالم.
+            </p>
+            <!-- Social Links -->
+            <div class="flex gap-3">
+              <a href="#" class="w-10 h-10 rounded-full bg-saudi-black-light flex items-center justify-center text-saudi-gold hover:bg-saudi-gold hover:text-saudi-black transition-colors hover:scale-110 active:scale-95">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
+              </a>
+              <a href="#" class="w-10 h-10 rounded-full bg-saudi-black-light flex items-center justify-center text-saudi-gold hover:bg-saudi-gold hover:text-saudi-black transition-colors hover:scale-110 active:scale-95">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="#" class="w-10 h-10 rounded-full bg-saudi-black-light flex items-center justify-center text-saudi-gold hover:bg-saudi-gold hover:text-saudi-black transition-colors hover:scale-110 active:scale-95">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="opacity-0 translate-y-8 transition-all duration-700 ease-out scroll-reveal delay-100">
+            <h4 class="font-cairo text-lg font-bold text-saudi-gold mb-6">روابط سريعة</h4>
+            <ul class="space-y-3">
+              <li><a href="index.html" class="text-saudi-cream/70 hover:text-saudi-gold transition-colors text-sm">الرئيسية</a></li>
+              <li><a href="history.html" class="text-saudi-cream/70 hover:text-saudi-gold transition-colors text-sm">التاريخ</a></li>
+              <li><a href="heritage.html" class="text-saudi-cream/70 hover:text-saudi-gold transition-colors text-sm">التراث</a></li>
+              <li><a href="landmarks.html" class="text-saudi-cream/70 hover:text-saudi-gold transition-colors text-sm">المعالم</a></li>
+            </ul>
+          </div>
+
+          <!-- Experience Links -->
+          <div class="opacity-0 translate-y-8 transition-all duration-700 ease-out scroll-reveal delay-200">
+            <h4 class="font-cairo text-lg font-bold text-saudi-gold mb-6">تجارب تفاعلية</h4>
+            <ul class="space-y-3">
+              <li><a href="experiences.html" class="text-saudi-cream/70 hover:text-saudi-gold transition-colors text-sm">الجولات الافتراضية</a></li>
+              <li><a href="gallery.html" class="text-saudi-cream/70 hover:text-saudi-gold transition-colors text-sm">معرض الصور</a></li>
+              <li><a href="contact.html" class="text-saudi-cream/70 hover:text-saudi-gold transition-colors text-sm">تواصل معنا</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="opacity-0 translate-y-8 transition-all duration-700 ease-out scroll-reveal delay-300">
+            <h4 class="font-cairo text-lg font-bold text-saudi-gold mb-6">تواصل معنا</h4>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <i data-lucide="map-pin" class="text-saudi-gold mt-1 flex-shrink-0 w-4 h-4"></i>
+                <span class="text-saudi-cream/70 text-sm">الرياض – المملكة العربية السعودية</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="mail" class="text-saudi-gold flex-shrink-0 w-4 h-4"></i>
+                <a href="mailto:info@asala.sa" class="text-saudi-cream/70 hover:text-saudi-gold transition-colors text-sm">info@asala.sa</a>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="phone" class="text-saudi-gold flex-shrink-0 w-4 h-4"></i>
+                <a href="tel:+966500000000" class="text-saudi-cream/70 hover:text-saudi-gold transition-colors text-sm">+966 500 000 000</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-saudi-gold/10 relative z-10">
+        <div class="container-custom py-6">
+          <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-saudi-cream/50 text-sm text-center md:text-right">
+              جميع الحقوق محفوظة © 2025 أصالة – بوابة التراث السعودي
+            </p>
+            <div class="flex gap-6">
+              <a href="#" class="text-saudi-cream/50 hover:text-saudi-gold transition-colors text-sm">سياسة الخصوصية</a>
+              <a href="#" class="text-saudi-cream/50 hover:text-saudi-gold transition-colors text-sm">الشروط والأحكام</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

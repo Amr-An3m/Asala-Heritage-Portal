@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;500;600;700;800&family=Noto+Sans+Arabic:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 0.625rem;
+  --background: 0 0% 10%;
+  --foreground: 45 30% 95%;
+  --card: 0 0% 12%;
+  --card-foreground: 45 30% 95%;
+  --popover: 0 0% 10%;
+  --popover-foreground: 45 30% 95%;
+  --primary: 45 65% 52%;
+  --primary-foreground: 0 0% 10%;
+  --secondary: 160 65% 14%;
+  --secondary-foreground: 45 30% 95%;
+  --muted: 0 0% 18%;
+  --muted-foreground: 45 20% 70%;
+  --accent: 45 65% 52%;
+  --accent-foreground: 0 0% 10%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 20%;
+  --input: 0 0% 20%;
+  --ring: 45 65% 52%;
+}
+
+.light {
+  --background: 45 30% 95%;
+  --foreground: 0 0% 10%;
+  --card: 45 20% 92%;
+  --card-foreground: 0 0% 10%;
+  --popover: 45 30% 95%;
+  --popover-foreground: 0 0% 10%;
+  --primary: 160 65% 14%;
+  --primary-foreground: 45 30% 95%;
+  --secondary: 45 65% 52%;
+  --secondary-foreground: 0 0% 10%;
+  --muted: 45 15% 85%;
+  --muted-foreground: 0 0% 35%;
+  --accent: 160 65% 14%;
+  --accent-foreground: 45 30% 95%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 45 15% 80%;
+  --input: 45 15% 80%;
+  --ring: 160 65% 14%;
+}
+
+/* Light Mode Overrides for Tailwind Classes */
+.light body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.light .bg-saudi-black,
+.light .bg-saudi-black-light {
+  background-color: hsl(var(--background)) !important;
+}
+
+.light .text-saudi-cream,
+.light .text-saudi-cream\/70,
+.light .text-saudi-cream\/80 {
+  color: hsl(var(--foreground)) !important;
+}
+
+.light .border-saudi-gold\/20,
+.light .border-saudi-gold\/10 {
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.light .glass {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.light #main-nav.bg-saudi-black\/95 {
+  background-color: rgba(245, 230, 202, 0.95) !important;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  direction: rtl;
+  overflow-x: hidden;
+}
+
+/* Arabic Typography */
+.font-amiri {
+  font-family: 'Amiri', serif;
+}
+
+.font-cairo {
+  font-family: 'Cairo', sans-serif;
+}
+
+.font-noto {
+  font-family: 'Noto Sans Arabic', sans-serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A1A1A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E5C76B;
+}
+
+/* Gold Text Effect */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #D4AF37 0%, #E5C76B 50%, #B8960C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass Effect */
+.glass {
+  background: rgba(26, 26, 26, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.glass-light {
+  background: rgba(245, 245, 220, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Islamic Pattern Background */
+.islamic-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Hover Effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Hover Zoom */
+.img-zoom {
+  overflow: hidden;
+}
+
+.img-zoom img {
+  transition: transform 0.6s ease;
+}
+
+.img-zoom:hover img {
+  transform: scale(1.1);
+}
+
+/* Gold Border Animation */
+.gold-border {
+  position: relative;
+}
+
+.gold-border::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #D4AF37, #E5C76B);
+  transition: width 0.3s ease;
+}
+
+.gold-border:hover::after {
+  width: 100%;
+}
+
+/* Section Padding */
+.section-padding {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+/* Container */
+.container-custom {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .container-custom {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* Button Styles */
+.btn-primary {
+  background: linear-gradient(135deg, #D4AF37 0%, #B8960C 100%);
+  color: #1A1A1A;
+  padding: 0.875rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+}
+
+.btn-secondary {
+  border: 2px solid #D4AF37;
+  color: #D4AF37;
+  padding: 0.875rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.btn-secondary:hover {
+  background: #D4AF37;
+  color: #1A1A1A;
+  transform: translateY(-2px);
+}
+
+/* Card Styles */
+.card-heritage {
+  background: rgba(45, 45, 45, 0.5);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.card-heritage:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+}
+
+/* Timeline Styles */
+.timeline-line {
+  position: absolute;
+  right: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #D4AF37 0%, #0D3B2E 100%);
+  transform: translateX(50%);
+}
+
+.timeline-dot {
+  width: 20px;
+  height: 20px;
+  background: #D4AF37;
+  border: 4px solid #1A1A1A;
+  border-radius: 50%;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.3);
+}
+
+/* Parallax Effect */
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+/* Reveal Animation Classes */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Navigation Active State */
+.nav-link {
+  position: relative;
+  padding-bottom: 0.25rem;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background: #D4AF37;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Form Styles */
+.form-input {
+  background: rgba(45, 45, 45, 0.5);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  color: inherit;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #D4AF37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+}
+
+.form-input::placeholder {
+  color: rgba(245, 245, 220, 0.5);
+}
+
+/* Light mode form input */
+.light .form-input {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(13, 59, 46, 0.3);
+  color: #1A1A1A;
+}
+
+.light .form-input::placeholder {
+  color: rgba(26, 26, 26, 0.5);
+}
+
+/* Stats Counter */
+.stat-number {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 800;
+  font-size: 4rem;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .stat-number {
+    font-size: 2.5rem;
+  }
+}
+
+/* Tab Styles */
+.tab-active {
+  color: #D4AF37;
+  border-bottom: 2px solid #D4AF37;
+}
+
+/* Masonry Grid */
+.masonry-grid {
+  column-count: 3;
+  column-gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .masonry-grid {
+    column-count: 1;
+  }
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
+
+/* Loading Animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  animation: spin 1s linear infinite;
+}
+
+/* Selection Color */
+::selection {
+  background: rgba(212, 175, 55, 0.3);
+  color: inherit;
+}
+
+/* Focus Styles */
+:focus-visible {
+  outline: 2px solid #D4AF37;
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
